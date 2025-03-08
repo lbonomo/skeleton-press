@@ -1,0 +1,23 @@
+
+{
+  "scripts": {
+    "dst": "gulp build",
+    "dev": "gulp dev",
+    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "# fix-it # dir-archiver --includebasedir true --src ../wordpress/wp-content/themes/kms_2024 --dest ../kms_2024.zip",
+    "phpmd": "composer phpmd",
+    "phpcs": "composer phpcs"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^30.4.0",
+    "dir-archiver": "^2.1.0",
+    "gulp": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-copy": "^5.0.0",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-notify": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0"
+  }
+}
