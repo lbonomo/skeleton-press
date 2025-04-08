@@ -1,0 +1,12 @@
+name: project-name
+recipe: wordpress
+config:
+  webroot: wordpress
+  php: '8.2'
+services:
+  appserver:
+    overrides:
+      volumes:
+        - ./.wp-cli/:/var/www/.wp-cli/
+        - ./tools/:/app/tools/
+        - ./plugins/plugin-name/.build:/app/wordpress/wp-content/plugins/plugin-name/
