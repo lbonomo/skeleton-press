@@ -1,7 +1,7 @@
 #! /bin/bash
 # Ahora dentro del contenedor
 
-project_name=forestales
+project_name=$LANDO_APP_PROJECT
 
 wp core download
 
